@@ -1,0 +1,85 @@
+!SESSION 2018-02-10 16:41:01.978 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.php.product -keyring /Users/shosoftware/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.php.product -keyring /Users/shosoftware/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2018-02-10 16:41:38.644
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.wst.validation 4 0 2018-02-10 16:52:35.972
+!MESSAGE IWAE0027E Could not retrieve the validation configuration for resource  .
+!STACK 0
+java.lang.reflect.InvocationTargetException: IWAE0027E Could not retrieve the validation configuration for resource  .
+	at org.eclipse.wst.validation.internal.ConfigurationManager.getProjectConfiguration(ConfigurationManager.java:135)
+	at org.eclipse.wst.validation.internal.ConfigurationManager.getConfiguration(ConfigurationManager.java:251)
+	at org.eclipse.wst.validation.internal.ValManager.getValidatorsNotCached(ValManager.java:226)
+	at org.eclipse.wst.validation.internal.ValManager.access$1(ValManager.java:220)
+	at org.eclipse.wst.validation.internal.ValManager$ValidatorCache.getValidatorsCached(ValManager.java:1263)
+	at org.eclipse.wst.validation.internal.ValManager.getValidators(ValManager.java:197)
+	at org.eclipse.wst.validation.internal.ValManager.accept(ValManager.java:797)
+	at org.eclipse.wst.validation.internal.DisabledValidatorManager$DisabledValidationFinder.findDisabledValidatorsFor(DisabledValidatorManager.java:109)
+	at org.eclipse.wst.validation.internal.DisabledValidatorManager.getDisabledValidatorsFor(DisabledValidatorManager.java:62)
+	at org.eclipse.wst.validation.ValidationFramework.getDisabledValidatorsFor(ValidationFramework.java:232)
+	at org.eclipse.php.internal.ui.editor.ASTProvider.isValidatorDisabled(ASTProvider.java:600)
+	at org.eclipse.php.internal.ui.editor.ASTProvider.isReconciling(ASTProvider.java:583)
+	at org.eclipse.php.internal.ui.editor.ASTProvider.getAST(ASTProvider.java:497)
+	at org.eclipse.php.ui.editor.SharedASTProvider.getAST(SharedASTProvider.java:143)
+	at org.eclipse.php.internal.ui.editor.PHPStructuredEditor$4.run(PHPStructuredEditor.java:3055)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Resource '/ ' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:334)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:208)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:140)
+	at org.eclipse.core.internal.resources.Resource.checkAccessibleAndLocal(Resource.java:214)
+	at org.eclipse.core.internal.resources.Resource.getSessionProperty(Resource.java:1206)
+	at org.eclipse.wst.validation.internal.ConfigurationManager.getProjectConfiguration(ConfigurationManager.java:126)
+	... 15 more
+Root exception:
+org.eclipse.core.internal.resources.ResourceException: Resource '/ ' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:334)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:208)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:140)
+	at org.eclipse.core.internal.resources.Resource.checkAccessibleAndLocal(Resource.java:214)
+	at org.eclipse.core.internal.resources.Resource.getSessionProperty(Resource.java:1206)
+	at org.eclipse.wst.validation.internal.ConfigurationManager.getProjectConfiguration(ConfigurationManager.java:126)
+	at org.eclipse.wst.validation.internal.ConfigurationManager.getConfiguration(ConfigurationManager.java:251)
+	at org.eclipse.wst.validation.internal.ValManager.getValidatorsNotCached(ValManager.java:226)
+	at org.eclipse.wst.validation.internal.ValManager.access$1(ValManager.java:220)
+	at org.eclipse.wst.validation.internal.ValManager$ValidatorCache.getValidatorsCached(ValManager.java:1263)
+	at org.eclipse.wst.validation.internal.ValManager.getValidators(ValManager.java:197)
+	at org.eclipse.wst.validation.internal.ValManager.accept(ValManager.java:797)
+	at org.eclipse.wst.validation.internal.DisabledValidatorManager$DisabledValidationFinder.findDisabledValidatorsFor(DisabledValidatorManager.java:109)
+	at org.eclipse.wst.validation.internal.DisabledValidatorManager.getDisabledValidatorsFor(DisabledValidatorManager.java:62)
+	at org.eclipse.wst.validation.ValidationFramework.getDisabledValidatorsFor(ValidationFramework.java:232)
+	at org.eclipse.php.internal.ui.editor.ASTProvider.isValidatorDisabled(ASTProvider.java:600)
+	at org.eclipse.php.internal.ui.editor.ASTProvider.isReconciling(ASTProvider.java:583)
+	at org.eclipse.php.internal.ui.editor.ASTProvider.getAST(ASTProvider.java:497)
+	at org.eclipse.php.ui.editor.SharedASTProvider.getAST(SharedASTProvider.java:143)
+	at org.eclipse.php.internal.ui.editor.PHPStructuredEditor$4.run(PHPStructuredEditor.java:3055)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.php.core 4 10001 2018-02-10 17:47:37.091
+!MESSAGE PHPCore plugin internal error
+!STACK 1
+org.eclipse.dltk.core.ModelException:   does not exist
+	at org.eclipse.dltk.internal.core.ModelOperation.runOperation(ModelOperation.java:760)
+	at org.eclipse.dltk.internal.core.SourceType.newSupertypeHierarchy(SourceType.java:404)
+	at org.eclipse.dltk.internal.core.SourceType.newSupertypeHierarchy(SourceType.java:369)
+	at org.eclipse.php.internal.core.model.PerFileModelAccessCache.getSuperTypeHierarchy(PerFileModelAccessCache.java:62)
+	at org.eclipse.php.internal.core.codeassist.PHPSelectionEngine.processPHPCallExpression(PHPSelectionEngine.java:966)
+	at org.eclipse.php.internal.core.codeassist.PHPSelectionEngine.internalASTResolve(PHPSelectionEngine.java:309)
+	at org.eclipse.php.internal.core.codeassist.PHPSelectionEngine.select(PHPSelectionEngine.java:117)
+	at org.eclipse.dltk.internal.core.Openable.codeSelect(Openable.java:662)
+	at org.eclipse.dltk.internal.core.Openable.codeSelectAll(Openable.java:686)
+	at org.eclipse.dltk.internal.core.AbstractSourceModule.codeSelectAll(AbstractSourceModule.java:96)
+	at org.eclipse.dltk.internal.core.AbstractSourceModule.codeSelectAll(AbstractSourceModule.java:90)
+	at org.eclipse.dltk.internal.core.AbstractSourceModule.codeSelectAll(AbstractSourceModule.java:1)
+	at org.eclipse.dltk.internal.ui.text.hover.AbstractScriptEditorTextHover.getHoverInfo(AbstractScriptEditorTextHover.java:142)
+	at org.eclipse.php.internal.ui.editor.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:139)
+	at org.eclipse.php.internal.ui.editor.hover.PHPTextHoverProxy.getHoverInfo2(PHPTextHoverProxy.java:77)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SUBENTRY 1 org.eclipse.dltk.core 4 969 2018-02-10 17:47:37.091
+!MESSAGE   does not exist
