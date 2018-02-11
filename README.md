@@ -1,2 +1,0 @@
-# yiitest
-Testing Yii Framework
